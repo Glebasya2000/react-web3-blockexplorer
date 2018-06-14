@@ -69,7 +69,7 @@ class BlocksComponent extends Component {
                 link
                 key={block.number}
                 as={Link}
-                to={`/${block.number}`}
+                to={`/${block.number}/0`}
                 active={selectedBlock && block.hash === selectedBlock.hash}
               >
                 <Image

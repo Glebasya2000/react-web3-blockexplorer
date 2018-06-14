@@ -9,7 +9,7 @@ import blockies from "ethereum-blockies-png";
 const TransactionsComponent = ({ block }) => {
   if (!block) return null;
   return (
-    <div>
+    <>
       <Segment style={{ overflow: "auto", maxHeight: 550 }}>
         <Header as="h2" textAlign="center">
           Transactions of Block #{block.number}
@@ -25,16 +25,14 @@ const TransactionsComponent = ({ block }) => {
                   />
                 </Table.Cell>
                 <Table.Cell>
-                  <Link to={`/${block.number}/transactions/${i}`}>
-                    {transaction}
-                  </Link>
+                  <Link to={`/${block.number}/${i}`}>{transaction}</Link>
                 </Table.Cell>
               </Table.Row>
             ))}
           </Table.Body>
         </Table>
       </Segment>
-    </div>
+    </>
   );
 };
 

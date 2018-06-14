@@ -23,7 +23,8 @@ class TransactionInfoComponent extends Component {
     const { transaction, match: prevMatch } = this.props;
     if (
       !transaction ||
-      prevMatch.params.transaction !== match.params.transaction
+      prevMatch.params.transaction !== match.params.transaction ||
+      prevMatch.params.block !== match.params.block
     ) {
       this.state.loading = true;
     } else {
